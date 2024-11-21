@@ -1,0 +1,104 @@
+@media (max-width: 1000px) {
+  html {
+    font-size: 8px;
+  }
+}
+@media (max-width: 800px) {
+  .header {
+    padding: 0;
+  }
+  .header::before {
+    z-index: 0;
+  }
+  .container {
+    row-gap: 8rem;
+    grid-template-columns: 1fr;
+  }
+  .section {
+    grid-template-columns: 1fr;
+  }
+  .bio__image {
+    grid-row: 1;
+    justify-self: center;
+    margin-bottom: 4rem;
+  }
+  .skills__list,
+  .skills__title {
+    padding: 10rem 5rem;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 0.1rem;
+  }
+  .img_and_tab {
+    display: grid;
+    grid-column: 1fr;
+    /* display: block; */
+    grid-template-columns: 1fr;
+  }
+
+  .clients_opinions {
+    font-size: var(--font-size-24);
+  }
+  .mail_n_form {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    row-gap: 10rem;
+  }
+  .social {
+    font-size: 14px;
+    display: grid;
+    grid-row: 2;
+    row-gap: 1.8rem;
+  }
+  .contact_input {
+    font-size: 14px;
+  }
+}
+@media (max-width: 500px) {
+  .burger-menu {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 0.75rem;
+    z-index: 0;
+    align-self: center;
+  }
+  .burger-menu_bar {
+    height: 0.3rem;
+    width: 4.375rem;
+    background-color: var(--color-white);
+    transition: var(--transition-timing);
+    /* color: var(--color-text); */
+  }
+  .header:has(.burger-menu_checkbox:checked) .burger-menu_bar:nth-child(1) {
+    transform: translateY(10px) rotate(40deg);
+  }
+  .header:has(.burger-menu_checkbox:checked) .burger-menu_bar:nth-child(2) {
+    opacity: 0;
+    visibility: hidden;
+  }
+  .header:has(.burger-menu_checkbox:checked) .burger-menu_bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-40deg);
+  }
+  .burger-menu_checkbox:checked + .navigation {
+    top: 100%;
+    transition: var(--transition-timing);
+    background-color: var(--color-background);
+  }
+  .navigation {
+    position: absolute;
+    padding: 3rem 0;
+    width: 100%;
+    top: 0;
+    border-bottom: 0.1rem solid var(--color-text);
+    z-index: -1;
+    width: 100vw;
+  }
+  .navigation__list {
+    justify-content: center;
+  }
+  .toggle {
+    padding: 3rem 0;
+    z-index: 1;
+  }
+}

@@ -1,0 +1,26 @@
+
+.img_and_tab {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+  }
+  .quran_tab {
+    font-size: var(--font-weight-bold);
+    font-size: var(--font-size-24);
+    margin-bottom: 3rem;
+  }
+  .tab_talk {
+    font-size: var(--font-size-18);
+    max-width: 65%;
+  }
+  .projects_links {
+    display: flex;
+    gap: 3rem;
+    margin-top: 4rem;
+  }
+  .projects_links a::after,
+  .projects_links a:visited,
+  .projects_links a::after {
+    color: var(--color-blue);
+  }
+  

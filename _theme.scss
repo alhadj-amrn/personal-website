@@ -1,0 +1,22 @@
+html:has(.toggle_checkbox:checked) {
+  --color-background: var(--color-black);
+  background-color: var(--color-black);
+  --color-text: var(--color-white);
+  color: var(--color-red);
+  --color-box-img: var(--color-green);
+  --color-link-bg: var(--color-green);
+  --color-input-border: var(--color-white);
+  /* border-color: var(--color-white); */
+  --color-grey: grey;
+}
+html:has(.toggle_checkbox:checked) {
+  .video__loop {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    opacity: 0.5;
+  }
+}
